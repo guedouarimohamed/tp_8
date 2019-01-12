@@ -11,18 +11,14 @@ pipeline {
         mail(subject: 'result build', body: 'result', bcc: 'em_guedouari@esi.dz')
       }
     }
-    stage('Code Analysis') {
-      parallel {
-        stage('Code Analysis') {
-          steps {
-            withSonarQubeEnv 'sonarqube'
-          }
-        }
-        stage('Test Reporting') {
-          steps {
-            echo 'hello'
-          }
-        }
+    stage('Test Reporting') {
+      steps {
+        echo 'hello'
+      }
+    }
+    stage('Deployment') {
+      steps {
+        bat 'gradle uploadArchives'
       }
     }
   }
