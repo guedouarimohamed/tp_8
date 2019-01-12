@@ -15,7 +15,7 @@ pipeline {
       parallel {
         stage('Code Analysis') {
           steps {
-            waitForQualityGate true
+            withSonarQubeEnv 'SonaQubeScanner'
           }
         }
         stage('Test Reporting') {
