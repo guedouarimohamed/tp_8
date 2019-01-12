@@ -4,6 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         archiveArtifacts(artifacts: 'build/libs/*.jar', excludes: 'docs')
+        bat 'gradle build'
       }
     }
     stage('Mail Notification') {
