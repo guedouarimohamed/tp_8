@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        bat 'gradle build'
+        archiveArtifacts(artifacts: 'build/libs/*.jar', excludes: 'docs')
       }
     }
   }
