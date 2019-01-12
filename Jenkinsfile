@@ -18,7 +18,7 @@ pipeline {
     }
     stage('Deployment') {
       steps {
-        bat 'gradle uploadArchives'
+        bat(script: 'gradle uploadArchives', returnStatus: true)
       }
     }
   }
