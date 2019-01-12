@@ -21,5 +21,10 @@ pipeline {
         bat(script: 'gradle uploadArchives', returnStatus: true)
       }
     }
+    stage('Slack Notification') {
+      steps {
+        slackSend(channel: 'tp_jenkins', baseUrl: 'https://tp-jenkins.slack.com/services/hooks/jenkins-ci/', attachments: 'test_slack', token: 'Z1sr3VvwbF2eHpFX0lCO4Eld', tokenCredentialId: 'id_slack', message: 'hellow')
+      }
+    }
   }
 }
