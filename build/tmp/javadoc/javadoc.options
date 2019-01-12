@@ -1,0 +1,8 @@
+-classpath 'D:\\2CS_SL\\S1\\OUTILS GL\\TP\\TP6\\matrix\\build\\classes\\java\\main;D:\\2CS_SL\\S1\\OUTILS GL\\TP\\TP6\\matrix\\build\\resources\\main'
+-d 'D:\\2CS_SL\\S1\\OUTILS GL\\TP\\TP6\\matrix\\build\\docs\\javadoc'
+-doctitle 'matrix 1.0 API'
+-quiet 
+-windowtitle 'matrix 1.0 API'
+'D:\\2CS_SL\\S1\\OUTILS GL\\TP\\TP6\\matrix\\src\\main\\java\\com\\example\\exception\\NoSquareException.java'
+'D:\\2CS_SL\\S1\\OUTILS GL\\TP\\TP6\\matrix\\src\\main\\java\\com\\example\\model\\Matrix.java'
+'D:\\2CS_SL\\S1\\OUTILS GL\\TP\\TP6\\matrix\\src\\main\\java\\com\\example\\service\\MatrixMathematics.java'
