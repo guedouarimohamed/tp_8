@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Mail Notification') {
       steps {
-        mail(subject: 'result build', body: 'result', bcc: 'em_guedouar@esi.dz')
+        mail(subject: 'result build', body: 'result', bcc: 'em_guedouari@esi.dz')
       }
     }
   }
