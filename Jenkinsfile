@@ -34,6 +34,7 @@ pipeline {
           }
         }
         stage('Code Analysis') {
+          agent any
           steps {
             echo 'zz'
             withSonarQubeEnv('sonarqube') {
