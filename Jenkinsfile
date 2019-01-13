@@ -54,4 +54,7 @@ pipeline {
   tools {
     gradle 'GRADLE_LATEST'
   }
+  environment {
+  PATH = 'D:\2CS SL\S1\OUTILS GL\TP\sonar\sonarqube-7.3\sonarqube-7.3\bin\windows-x86-64;D:\2CS_SL\S1\OUTILS GL\TP\sonar\sonar-scanner-cli-3.2.0.1227-windows\sonar-scanner-3.2.0.1227-windows\bin'
+  }
 }
