@@ -26,23 +26,9 @@ pipeline {
       }
     }
     stage('Test Reporting') {
-      parallel {
-        stage('Test Reporting') {
-          steps {
-            echo 'hello'
-            jacoco(execPattern: 'build/jacoco/test.exec')
-          }
-        }
-        stage('Code Analysis') {
-          agent any
-          steps {
-            echo 'zz'
-            withSonarQubeEnv('sonarqube') {
-              bat 'sonar-scanner'
-            }
-
-          }
-        }
+      steps {
+        echo 'hello'
+        jacoco(execPattern: 'build/jacoco/test.exec')
       }
     }
     stage('Deployment') {
