@@ -2,17 +2,23 @@ pipeline {
   agent any
   stages {
     stage('Build') {
+      post {
+        failure {
+          mail(subject: 'result build', body: 'result : build failed', bcc: 'em_guedouari@esi.dz')
+
+        }
+
+        success {
+          mail(subject: 'result build', body: 'result : build success', bcc: 'em_guedouari@esi.dz')
+
+        }
+
+      }
       steps {
         bat 'gradle build'
         bat 'gradle javadoc'
         archiveArtifacts 'build/libs/*.jar , build/doc/javadoc'
       }
-      post {
-        failure {
-        mail(subject: 'result build', body: 'result : build failed', bcc: 'em_guedouari@esi.dz')}
-        success {
-        mail(subject: 'result build', body: 'result : build success', bcc: 'em_guedouari@esi.dz') }
-        }
     }
     stage('Mail Notification') {
       steps {
