@@ -34,7 +34,7 @@ pipeline {
         }
         stage('Code Analysis') {
           steps {
-            withSonarQubeEnv 'SonaQubeScanner'
+            withSonarQubeEnv 'sonarqube'
           }
         }
       }
