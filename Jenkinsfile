@@ -26,8 +26,17 @@ pipeline {
       }
     }
     stage('Test Reporting') {
-      steps {
-        echo 'hello'
+      parallel {
+        stage('Test Reporting') {
+          steps {
+            echo 'hello'
+          }
+        }
+        stage('Code Analysis') {
+          steps {
+            withSonarQubeEnv 'SonaQubeScanner'
+          }
+        }
       }
     }
     stage('Deployment') {
