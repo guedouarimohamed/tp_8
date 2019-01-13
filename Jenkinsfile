@@ -35,10 +35,7 @@ pipeline {
         }
         stage('analysis') {
           steps {
-            withSonarQubeEnv('sonarqube') {
-              bat 'sonar-scanner'
-            }
-
+            echo 'cc'
           }
         }
       }
