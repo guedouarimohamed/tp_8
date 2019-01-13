@@ -36,6 +36,10 @@ pipeline {
         stage('Code Analysis') {
           steps {
             echo 'zz'
+            withSonarQubeEnv('sonarqube') {
+              bat 'sonar-scanner'
+            }
+
           }
         }
       }
