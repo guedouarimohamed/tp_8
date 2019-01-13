@@ -30,7 +30,7 @@ pipeline {
         stage('Test Reporting') {
           steps {
             echo 'hello'
-            junit 'test'
+            jacoco(execPattern: 'build/jacoco/test.exec')
           }
         }
         stage('Code Analysis') {
