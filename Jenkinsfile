@@ -30,14 +30,12 @@ pipeline {
         stage('Test Reporting') {
           steps {
             echo 'hello'
+            junit 'test'
           }
         }
         stage('Code Analysis') {
           steps {
-            withSonarQubeEnv('sonarqube') {
-              bat 'sonar-scanner'
-            }
-
+            echo 'zz'
           }
         }
       }
