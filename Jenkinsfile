@@ -55,6 +55,6 @@ pipeline {
     gradle 'GRADLE_LATEST'
   }
   environment {
-  PATH='D:\2CS_SL\S1\OUTILS GL\TP\sonar\sonar-scanner-cli-3.2.0.1227-windows\sonar-scanner-3.2.0.1227-windows\bin'
+  PATH='D:\\2CS_SL\\S1\\OUTILS GL\\TP\\sonar\\sonar-scanner-cli-3.2.0.1227-windows\\sonar-scanner-3.2.0.1227-windows\\bin'
   }
 }
