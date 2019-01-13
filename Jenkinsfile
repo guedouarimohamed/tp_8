@@ -42,7 +42,7 @@ pipeline {
     }
     stage('Deployment') {
       steps {
-        bat(script: 'gradle uploadArchives', returnStatus: true)
+        bat 'gradle uploadArchives'
       }
     }
     stage('Slack Notification') {
